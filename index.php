@@ -27,8 +27,8 @@
             var helpDiv = $(this).attr('id');
             // Using get() other than load()
             $.get('get-help-text.php', {HelpTextKey: helpDiv}, function ( response ) {
-                $('#' + helpDiv + 'HelpDiv').html(response);
-            })
+                $('#' + helpDiv + 'HelpDiv').html(response.text);
+            }, 'json');
         });
 
         textBoxs.blur(function () {
