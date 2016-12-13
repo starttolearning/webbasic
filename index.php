@@ -63,15 +63,22 @@
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            function animationProgressBar( percentageComplete ){
+            var previousPrecentage  = 0;
+            var currentPrecentage  = 0;
+            
+            function animationProgressBar( previousPrecentage, currentPrecentage  ){
                 $( '#innerDiv' ).animate({
-                    'width' : (500 * percentageComplete ) / 100
+                    'width' : (500 * currentPrecentage ) / 100
                 }, 3000);
                 
-                
+                if( previousPrecentage > currentPrecentage){
+                    currentPrecentage -=1;
+                }
                 // animation can not only animate the DOM object and it also can
                 // animate only object or value you specified!
-                $({counter: 1 } ).animate( { counter:  percentageComplete},{ 
+                // Optimize the current progress bar
+                
+                $({counter: previousPrecentage } ).animate( { counter:  currentPrecentage},{ 
                     duration : 3000,
                     step: function () {
                         $('#innerDiv').text( Math.ceil(  this.counter) + '%' );
@@ -80,9 +87,11 @@
                 });
             }
             
-            
             $('#myBtn').click( function (){
-                animationProgressBar( $('#ddlPrecentage').val() );
+                previousPrecentage = currentPrecentage;
+                currentPrecentage  = $('#ddlPrecentage').val();
+                
+                animationProgressBar(previousPrecentage,currentPrecentage  );
             });
         });
     </script>
