@@ -41,23 +41,49 @@
             <li>Canada</li>
         </ul>   
         First Name : <input id="firstName" value=""/> <br/>
-        Country: 
-        <select id="selectCountry" >
-            <option value="USA">United State</option>
-            <option value="UK">United Kindom</option>
-            <option value="cn">China</option>
-            <option value="jp">Japan</option>
+        Select Percentages: 
+        <select id="ddlPrecentage" >
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="100">100</option>
         </select>
-        <div title="div" id="resultDiv"></div>
+        <input type="button" id="myBtn" value="Animate Progress"  />
+        <br/>
+        <div title="outDiv" id="outDiv" style="background-color: #eee; width: 500px; height: 20px; padding: 5px;"  >
+            <div id="innerDiv" style="background-color: #ff0000; width: 0px; height: 18px;"></div>
+        </div>
     </body>
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('body').on('contextmenu',function ( e ) {
-                e.preventDefault();
-                $('#resultDiv').append('Right click are disable');
+            function animationProgressBar( percentageComplete ){
+                $( '#innerDiv' ).animate({
+                    'width' : (500 * percentageComplete ) / 100
+                }, 3000);
                 
-            })
+                
+                // animation can not only animate the DOM object and it also can
+                // animate only object or value you specified!
+                $({counter: 1 } ).animate( { counter:  percentageComplete},{ 
+                    duration : 3000,
+                    step: function () {
+                        $('#innerDiv').text( Math.ceil(  this.counter) + '%' );
+                    }
+                
+                });
+            }
+            
+            
+            $('#myBtn').click( function (){
+                animationProgressBar( $('#ddlPrecentage').val() );
+            });
         });
     </script>
 
