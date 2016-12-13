@@ -57,41 +57,27 @@
         <input type="button" id="myBtn" value="Animate Progress"  />
         <br/>
         <div title="outDiv" id="outDiv" style="background-color: #eee; width: 500px; height: 20px; padding: 5px;"  >
-            <div id="innerDiv" style="background-color: #ff0000; width: 0px; height: 18px;"></div>
+            <div id="innerDiv" style="background-color: #00ff00; width: 0px; height: 20px;"></div>
         </div>
     </body>
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var previousPrecentage  = 0;
-            var currentPrecentage  = 0;
+            // Optimized and simplist version of progress bar
             
-            function animationProgressBar( previousPrecentage, currentPrecentage  ){
+            
+            function animationProgressBar( currentPrecentage  ){
                 $( '#innerDiv' ).animate({
                     'width' : (500 * currentPrecentage ) / 100
-                }, 3000);
-                
-                if( previousPrecentage > currentPrecentage){
-                    currentPrecentage -=1;
-                }
-                // animation can not only animate the DOM object and it also can
-                // animate only object or value you specified!
-                // Optimize the current progress bar
-                
-                $({counter: previousPrecentage } ).animate( { counter:  currentPrecentage},{ 
-                    duration : 3000,
-                    step: function () {
-                        $('#innerDiv').text( Math.ceil(  this.counter) + '%' );
+                }, {
+                    duration : 2000,
+                    step : function (now, tween){
+                        $('#innerDiv').text( Math.ceil( ( now / 500) * 100 ) + '%' );
                     }
-                
                 });
             }
-            
             $('#myBtn').click( function (){
-                previousPrecentage = currentPrecentage;
-                currentPrecentage  = $('#ddlPrecentage').val();
-                
-                animationProgressBar(previousPrecentage,currentPrecentage  );
+                animationProgressBar( $('#ddlPrecentage').val()  );
             });
         });
     </script>
