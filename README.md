@@ -15,6 +15,12 @@ A good flat picture from Google
 ![Image that to demo](testImg.jpg)
 
 
+## Add my famous blockquote
+
+> Don't do things that you do not want the other do to you.
+> -Wilton Lee
+
+
 ##jQuery enhance the power of JavaScript
 
 Much of my work was referenced from [jQuery.com](http://jquery.com).
