@@ -25,16 +25,10 @@
 
         textBoxs.focus(function () {
             var helpDiv = $(this).attr('id');
-            $('#' + helpDiv + 'HelpDiv').load('get-help-text.php', {HelpTextKey: helpDiv },
-                    function (response, status, xhr) {
-                        if (status == 'error') {
-                            var statusMessage = 'status = ' + xhr.status + '<br/>';
-                            statusMessage += 'status text = ' + xhr.statusText + '<br/>';
-                            statusMessage += 'response = ' + response;
-
-                            $('#divStatus').html(statusMessage);
-                        }
-                    });
+            // Using get() other than load()
+            $.get('get-help-text.php', {HelpTextKey: helpDiv}, function ( response ) {
+                $('#' + helpDiv + 'HelpDiv').html(response);
+            })
         });
 
         textBoxs.blur(function () {
