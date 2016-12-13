@@ -9,6 +9,12 @@ In this area I learn a lot **basic** syntax to interactive with the *DOM Object*
 4. Array
 5. Object
 
+## Add a picture to pleasure my own
+
+A good flat picture from Google
+![Image that to demo](testImg.jpg)
+
+
 ##jQuery enhance the power of JavaScript
 
 Much of my work was referenced from [jQuery.com](http://jquery.com).
