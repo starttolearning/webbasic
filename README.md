@@ -24,6 +24,8 @@ A good flat picture from Google
 ## Highlight the code or just plain code
 
 There are about three ways to achive this.
+
+
 1. Using 4 space to indent
 
     if(true){
@@ -40,6 +42,7 @@ if(true){
   alert("What's your life for?);
 }
 ```
+
 3. Using three backticks at begining and ending and your using language to highligt your code
 
 ```javascript
