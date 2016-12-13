@@ -21,6 +21,37 @@ A good flat picture from Google
 > -Wilton Lee
 
 
+## Highlight the code or just plain code
+
+There are about three ways to achive this.
+1. Using 4 space to indent
+
+    if(true){
+      echo "I love code";
+    }
+
+2. Using three backticks at begianing and ending
+
+```
+if(true){
+  echo "I love the coding life";
+}else{
+  echo "If you do not like it";
+  alert("What's your life for?);
+}
+```
+3. Using three backticks at begining and ending and your using language to highligt your code
+
+```javascript
+var flag = true;
+if( flag ){
+  document.write("Do your most to the code for about 1000 hours");
+}else{
+  document.write("There is no other easy way out");
+}
+```
+
+
 ##jQuery enhance the power of JavaScript
 
 Much of my work was referenced from [jQuery.com](http://jquery.com).
