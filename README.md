@@ -1,7 +1,8 @@
 #Basic Web Development Skills
 ##JavaScript is the foundamental skills
 
-In this area I learn a lot **basic** syntax to interactive with the *DOM Object*
+In this area I learn a lot **basic** syntax to interactive with the *DOM Object*:
+
 1. Basic Syntax
 2. DOM Object
 3. JSON
