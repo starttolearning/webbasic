@@ -26,9 +26,17 @@
         textBoxs.focus(function () {
             var helpDiv = $(this).attr('id');
             // Using get() other than load()
-            $.get('get-help-text.php', {HelpTextKey: helpDiv}, function ( response ) {
-                $('#' + helpDiv + 'HelpDiv').html(response.text);
-            }, 'json');
+            $.get('get-help-text.php', {HelpTextKey: helpDiv }, function ( response, status, xhr ) {
+                var jqueryXML = $(response);
+                var textElement = jqueryXML.find('text');
+                $('#' + helpDiv + 'HelpDiv').html(textElement.text());
+                
+                var statusMessage = 'status : ' + xhr.responseType;
+                
+                $('#divStatus').html(statusMessage);
+                console.log(xhr);
+                
+            },'xml');
         });
 
         textBoxs.blur(function () {

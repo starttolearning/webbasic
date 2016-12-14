@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT recipe (ingredients, directions, servings)>
+<!ATTLIST recipe name CDATA #REQUIRED>
+<!ELEMENT ingredients(#PCDATA)>
+<!ELEMENT directions(#PCDATA)>
+<!ELEMENT servings(#PCDATA)>
+

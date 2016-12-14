@@ -53,7 +53,6 @@ $text = $root->appendChild($text);
 $text_value = $doc->createTextNode($xml_obj->text);
 $text_value = $text->appendChild($text_value);
 
-ob_clean();
 echo $doc->saveXML() ;
 
 
