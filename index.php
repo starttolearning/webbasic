@@ -3,62 +3,61 @@
     <head>
         <meta charset="GBK">
         <title>jQuery Learning</title>
-        <style>
-            .divContainer{
-                font-size: 24px;
-                color: #ccc;
-                font-weight: 200;
-            }
-        </style>
     </head>
     <body>
-        <?php
-        ?>
-
-<!--        Skills: <input type="checkbox" name="skills" value="javascript"/> JavaScript
- <input type="checkbox" name="skills" value="jquery"/> jQuery
- <input type="checkbox" name="skills" value="php"/> PHP
- <input type="checkbox" name="skills" value="html"/> HTML
- <input type="checkbox" name="skills" value="css"/> CSS<br/><br/>
- 
- Prefered Cities: <input type="checkbox" name="skills" value="New York"/> New York
- <input type="checkbox" name="cities" value="Beijing"/> Beijing
- <input type="checkbox" name="cities" value="Shanghai"/> Shanghai
- <input type="checkbox" name="cities" value="Hong Kong"/> Hong Kong
- <input type="checkbox" name="cities" value="Chengdu"/> Chengdu<br/><br/>
- 
- <input type="submit" value="Get skills" id="btn1" />
- <input type="submit" value="Get cities" id="btn2" />-->
-
-        <input type="button" value="Click me" id="btn" />    
-        <input type="button" value="Undelegate" id="btn1" />    
-        <span id="myspan"> Country in the world.</span>
-        <ul>
-            <li>United States</li>
-            <li>United Kingdom</li>
-            <li>China</li>
-            <li>Japan</li>
-            <li>Canada</li>
-        </ul>   
-        First Name : <input id="firstName" value=""/> <br/>
-        Country: 
-        <select id="selectCountry" >
-            <option value="USA">United State</option>
-            <option value="UK">United Kindom</option>
-            <option value="cn">China</option>
-            <option value="jp">Japan</option>
-        </select>
-        <div title="div" id="resultDiv"></div>
+        <?php include_once './parts/part-insert-employee.php'; ?>
     </body>
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <!-- include the local jquery library-->
+    <script type="text/javascript" src="js/jquery3.1.1.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $('body').on('contextmenu',function ( e ) {
-                e.preventDefault();
-                $('#resultDiv').append('Right click are disable');
+        $(document).ready( function () {
+            $('#btnInsert').click(function () {
+                var employee = {};
+                employee.name = $('#txtName').val();
+                employee.gender = $('#txtGender').val();
+                employee.salary = $('#txtSalary').val();
                 
-            })
-        });
+                $.ajax({
+                   url: "inc/insert-employee.php",
+                   method : 'post',
+                   data: {
+                       employee : JSON.stringify(employee),
+                       action : 'insert_employee'
+                   },
+                   success: function () {
+                        getAllEmployees();
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            });
+            
+            function getAllEmployees(){
+                $.ajax({
+                   url: "inc/insert-employee.php",
+                   method : 'post',
+                   dataType: 'json',
+                   data: { action : 'get_all_employees' },
+                   success: function (data) {
+                       var employeeTable =  $('#tblEmployees tbody');
+                       console.log(JSON.stringify( data));
+                        $(data).each( function (index, emp) {
+                            employeeTable.append(
+                                    '<tr><td>'+emp.id+'</td>'+
+                                    '<td>'+emp.name+'</td>'+
+                                    '<td>'+emp.gender+'</td>'+
+                                    '<td>'+emp.salary+'</td></tr>'
+                                );
+                        });
+                    },
+                    error: function (err) {
+                        console.log(err);
+                    }
+                });
+            }
+                
+            });
     </script>
 
 
