@@ -38,13 +38,13 @@ function find_all_subjects()
 function find_pages_for_subject($subject_id)
 {
     global $connection;
+    $safe_subject_id = mysqli_real_escape_string($connection, $subject_id);
     $query = "SELECT * ";
     $query .= "FROM pages ";
-    $query .= "WHERE subject_id = {$subject_id} ";
+    $query .= "WHERE subject_id = {$safe_subject_id} ";
     $query .= "ORDER BY position ASC";
     $page_sets = mysqli_query($connection, $query);
     confirm_query($page_sets);
-
     return $page_sets;
 }
 
@@ -55,15 +55,13 @@ function find_pages_for_subject($subject_id)
  */
 function get_subject_name_by_id( $subject_id ) {
     global $connection;
-
+    // Escape the sql injection
     $safe_subject_id = mysqli_real_escape_string($connection, $subject_id);
     $query  = "SELECT * ";
     $query .= "FROM subjects ";
     $query .= "WHERE id = {$safe_subject_id} ";
     $query .= "Limit 1";
-
     $subject_set = mysqli_query($connection, $query);
-
     confirm_query($subject_set);
 
     if( $subject = mysqli_fetch_assoc($subject_set) ){
@@ -80,7 +78,7 @@ function get_subject_name_by_id( $subject_id ) {
  */
 function get_page_by_id( $page_id ){
     global $connection;
-
+    // Escape the sql injection
     $safe_page_id = mysqli_real_escape_string($connection, $page_id);
     $query  = "SELECT * ";
     $query .= "FROM pages ";
@@ -99,18 +97,33 @@ function get_page_by_id( $page_id ){
 }
 
 
+function find_current_subject_or_page(){
+    global $current_subject;
+    global $current_page;
+    if (isset($_GET["subject"])) {
+        $current_subject = get_subject_name_by_id($_GET["subject"]);
+        $current_page =null;
+    } else if (isset($_GET["page"])) {
+        $current_page = get_page_by_id($_GET["page"]);
+        $current_subject =null;
+    } else {
+        $current_subject =null;
+        $current_page =null;
+    }
+}
+
 /**
- * @param $selected_subject_id int From the $_GET array
- * @param $selected_page_id int From the $_GET array
+ * @param $page_array int From the $_GET array
+ * @param $subject_array int From the $_GET array
  * @return string
  */
-function navigation($selected_subject_id, $selected_page_id)
+function navigation($subject_array, $page_array)
 {
     $output = "<ul class=\"subjects\">";
     $subject_sets = find_all_subjects();
     while ($subject = mysqli_fetch_assoc($subject_sets)) {
         $output .= "<li ";
-        if ($subject["id"] == $selected_subject_id) {
+        if ($subject_array && $subject["id"] == $subject_array["id"]) {
             $output .= "class=\"selected\"";
         }
         $output .= ">";
@@ -120,7 +133,7 @@ function navigation($selected_subject_id, $selected_page_id)
         $output .= "<ul class=\"pages\">";
         while ($pages = mysqli_fetch_assoc($page_sets)) {
             $output .= "<li ";
-            if ($pages["id"] == $selected_page_id) {
+            if ($page_array && $pages["id"] == $page_array["id"]) {
                 $output .= "class=\"selected\"";
             }
             $output .= ">";
