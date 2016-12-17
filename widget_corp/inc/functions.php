@@ -4,7 +4,7 @@
  * User: wilton
  * Date: 12/16/2016
  * Time: 6:11 PM
- * functions file
+ * General functions file
  */
 
 /**
@@ -149,7 +149,7 @@ function navigation($subject_array, $page_array)
         }
         $output .= ">";
         $output .= "<a href=\"manage-content.php?subject=" . urlencode($subject["id"]) . "\">";
-        $output .= $subject["menu_name"] . "</a>";
+        $output .= htmlentities($subject["menu_name"] ). "</a>";
         $page_sets = find_pages_for_subject($subject["id"]);
         $output .= "<ul class=\"pages\">";
         while ($pages = mysqli_fetch_assoc($page_sets)) {
@@ -158,7 +158,7 @@ function navigation($subject_array, $page_array)
                 $output .= "class=\"selected\"";
             }
             $output .= ">";
-            $output .= "<a href=\"manage-content.php?page=" . urlencode($pages["id"]) . "\">" . $pages["menu_name"] . "</a></li>";
+            $output .= "<a href=\"manage-content.php?page=" . urlencode($pages["id"]) . "\">" . htmlentities($pages["menu_name"]) . "</a></li>";
         }
         mysqli_free_result($page_sets);
         $output .= "</ul></li> ";
@@ -168,22 +168,6 @@ function navigation($subject_array, $page_array)
     return $output;
 }
 
-
-function form_errors($errors = array())
-{
-    $output = "";
-    if (!empty($errors)) {
-        $output .= '<div class="error">';
-        $output .= 'Please fix the following errors: ';
-        $output .= '<ul>';
-        foreach ($errors as $key => $value) {
-            $output .= '<li>' . $value . '</li>';
-        }
-        $output .= '</ul>';
-        $output .= '</div>';
-    }
-    return $output;
-}
 
 function wc_form_errors($errors = array())
 {

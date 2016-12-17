@@ -16,13 +16,16 @@
         <?php echo message(); ?>
         <?php if ($current_subject) { ?>
             <h2>Manage subject</h2>
-            <b>Subject name:</b> <?php echo $current_subject['menu_name']; ?><br/>
-            <a href="edit-subject.php?subject=<?php echo $current_subject["id"]; ?>">Edit subject</a>
+            <b>Subject name: </b> <?php echo htmlentities($current_subject['menu_name']); ?><br/>
+            Position: <?php echo $current_subject["position"] ?><br/>
+            Visible: <?php echo $current_subject["visible"] ? "true" : "false"; ?><br/>
+            <a href="edit-subject.php?subject=<?php echo urlencode( $current_subject["id"] ); ?>">Edit subject</a>
         <?php } else if ($current_page) { ?>
             <h2>Manage Page</h2>
-            <b>Page name:</b> <?php echo $current_page['menu_name']; ?>
-
-            <p><?php echo $current_page['content']; ?></p>
+            <b>Page name:</b> <?php echo htmlentities($current_page['menu_name']); ?><br/>
+            Position: <?php echo $current_page["position"] ?><br/>
+            Visible: <?php echo $current_page["visible"] ? "true" : "false"; ?><br/><br/>
+            <p class="page-content"><?php echo htmlentities( $current_page['content'] ); ?></p>
 
         <?php } else { ?>
             <h2>Manage content</h2>

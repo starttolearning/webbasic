@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
         $query .= "LIMIT 1";
 
         $result = mysqli_query($connection, $query);
-        if ($result && mysqli_affected_rows($connection) == 1) {
+        if ($result && mysqli_affected_rows($connection) >= 0) {
             // Success
             $_SESSION["message"] = "Subject update.";
             redirect_to("manage-content.php");
@@ -59,13 +59,13 @@ if (isset($_POST['submit'])) {
 
     <div id="page">
         <?php if (!empty($message)) {
-            echo "<div class=\"message\"" . $message . "</div>";
+            echo "<div class=\"message\" >" .htmlentities( $message) . "</div>";
         } ?>
         <?php echo wc_form_errors($errors); ?>
-        <h2>Edit Subject: <em><?php echo $current_subject["menu_name"]; ?></em></h2>
-        <form method="post" action="edit-subject.php?subject=<?php echo $current_subject["id"]; ?>">
+        <h2>Edit Subject: <em><?php echo htmlentities( $current_subject["menu_name"] ); ?></em></h2>
+        <form method="post" action="edit-subject.php?subject=<?php echo urlencode( $current_subject["id"] ); ?>">
             <p>Subject name:
-                <input type="text" name="menu_name" value="<?php echo $current_subject["menu_name"]; ?>"/>
+                <input type="text" name="menu_name" value="<?php echo htmlentities( $current_subject["menu_name"] ); ?>"/>
             </p>
             <p>Position:
                 <select name="position">
@@ -98,7 +98,7 @@ if (isset($_POST['submit'])) {
         <br/>
         <a href="manage-content.php">Cancel</a>
         &nbsp; &nbsp;
-        <a href="delete-subject.php?subject=<?php echo $current_subject["id"]; ?>" onclick="return confirm('Are your sure?'); ">Delete</a>
+        <a href="delete-subject.php?subject=<?php echo urlencode(  $current_subject["id"] ); ?>" onclick="return confirm('Are your sure?'); ">Delete</a>
     </div><!--    page-->
 
 </div><!--main-->

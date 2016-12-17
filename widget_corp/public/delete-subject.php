@@ -28,7 +28,7 @@ if ($result && mysqli_affected_rows($connection) == 1) {
 } else {
     // Failed
     $_SESSION["message"] = "Subject delete failed.";
-    redirect_to("manage-content.php?subject={$id}");
+    redirect_to("manage-content.php?subject=".urlencode($id));
 }
 
 ?>
