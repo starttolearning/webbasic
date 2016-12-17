@@ -38,3 +38,13 @@ Revising existing code to changes its structure or appearance without changing i
 * Flexibility
   * Reusability
   * Extensibility
+
+## Session is most used for:
+* User authentication
+  * $logged_in, $user_id
+
+* Holding data during a redirect
+  * $message, $error
+
+* Frequently referred to data
+  * $username, $account_type

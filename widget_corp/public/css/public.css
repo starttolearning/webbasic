@@ -25,6 +25,9 @@ img { border: none;}
 a { color: #FFFFFF; text-decoration: none; }
 a:hover { color: #D4E6F4; }
 
+#page a { color: #8D0D19; text-decoration: none; }
+#page a:hover { color: #1A446C; }
+
 #header{
     height: 70px;
     margin:0;
@@ -89,6 +92,14 @@ ul.admin-navigation a:hover{
 
 #page h2 {color: #8D0D19; margin-top: 1em; }
 #page h3 { color: #8D0D19; }
+
+div.message{
+    border: 2px solid #8D0D19;
+    color: #8D0D19;
+    font-weight:bold;
+    margin: 1em 0;
+    padding:1em;
+}
 
 
 

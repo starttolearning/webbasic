@@ -7,7 +7,28 @@
  * functions file
  */
 
-//confirm_query function
+/**
+ * Redirect function
+ * @param $location
+ */
+function redirect_to( $location ){
+    header("Location: {$location}");
+    exit;
+};
+
+/**
+ * @param $string
+ * @return string
+ */
+function mysqli_prep( $string ){
+    global $connection;
+    return mysqli_real_escape_string($connection, $string);
+}
+
+/**
+ * confirm_query function
+ * @param $result_set
+ */
 function confirm_query($result_set)
 {
     if (!$result_set) {
@@ -144,5 +165,38 @@ function navigation($subject_array, $page_array)
     }
     mysqli_free_result($subject_sets);
     $output .= "</ul>";
+    return $output;
+}
+
+
+function form_errors($errors = array())
+{
+    $output = "";
+    if (!empty($errors)) {
+        $output .= '<div class="error">';
+        $output .= 'Please fix the following errors: ';
+        $output .= '<ul>';
+        foreach ($errors as $key => $value) {
+            $output .= '<li>' . $value . '</li>';
+        }
+        $output .= '</ul>';
+        $output .= '</div>';
+    }
+    return $output;
+}
+
+function wc_form_errors($errors = array())
+{
+    $output = "";
+    if (!empty($errors)) {
+        $output .= '<div class="error">';
+        $output .= 'Please fix the following errors: ';
+        $output .= '<ul>';
+        foreach ($errors as $key => $value) {
+            $output .= '<li>' . $value . '</li>';
+        }
+        $output .= '</ul>';
+        $output .= '</div>';
+    }
     return $output;
 }
