@@ -26,11 +26,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="create-page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widget_corp/public/create-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="78" />
+              <folding>
+                <marker date="1481987796310" expanded="true" signature="925:944" ph="INSERT INTO pages... " />
+                <marker date="1481987796310" expanded="true" signature="925:1015" ph="INSERT INTO pages... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widget_corp/inc/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="183" column="5" lean-forward="true" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="5" />
+            <state relative-caret-position="407">
+              <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
               <folding>
                 <element signature="e#6#113#0#PHP" expanded="true" />
               </folding>
@@ -41,55 +54,60 @@
       <file leaf-file-name="manage-content.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/manage-content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="89" lean-forward="false" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+            <state relative-caret-position="270">
+              <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete-subject.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widget_corp/public/delete-subject.php">
+      <file leaf-file-name="public.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widget_corp/public/css/public.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="341">
+              <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-page.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/widget_corp/public/edit-page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
               <folding>
-                <marker date="1481978720419" expanded="true" signature="610:647" ph="DELETE FROM " />
-                <marker date="1481978720419" expanded="true" signature="610:655" ph="DELETE FROM " />
+                <element signature="e#3749#3755#0#HTML" expanded="true" />
+                <element signature="e#3756#3762#0#HTML" expanded="true" />
+                <marker date="1481992887926" expanded="true" signature="1027:1043" ph="UPDATE subje... " />
+                <marker date="1481992887926" expanded="true" signature="2391:2430" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new-subject.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/widget_corp/public/new-subject.php">
+      <file leaf-file-name="delete-page.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/widget_corp/public/delete-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="152">
+              <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
               <folding>
-                <element signature="e#1281#1287#0#HTML" expanded="true" />
-                <marker date="1481972562549" expanded="true" signature="618:660" ph="..." />
-                <marker date="1481972562549" expanded="true" signature="727:766" ph="..." />
-                <marker date="1481972562549" expanded="true" signature="1189:1226" ph="..." />
-                <marker date="1481972562549" expanded="true" signature="1386:1415" ph="..." />
+                <marker date="1481992783722" expanded="true" signature="380:422" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-subject.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit-subject.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/widget_corp/public/edit-subject.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="39" column="61" lean-forward="false" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
+            <state relative-caret-position="76">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="40" />
               <folding>
-                <element signature="e#3199#3205#0#HTML" expanded="true" />
-                <element signature="e#3579#3585#0#HTML" expanded="true" />
-                <element signature="e#3586#3592#0#HTML" expanded="true" />
-                <marker date="1481979095837" expanded="true" signature="979:1091" ph="INSERT INTO subjects... " />
-                <marker date="1481979095837" expanded="true" signature="1932:2035" ph="..." />
-                <marker date="1481979095837" expanded="true" signature="3011:3048" ph="..." />
-                <marker date="1481979095837" expanded="true" signature="3400:3429" ph="..." />
+                <marker date="1481980645227" expanded="true" signature="979:1091" ph="INSERT INTO subjects... " />
+                <marker date="1481980645227" expanded="true" signature="1932:2035" ph="..." />
+                <marker date="1481980645227" expanded="true" signature="3011:3048" ph="..." />
+                <marker date="1481980645227" expanded="true" signature="3400:3429" ph="..." />
               </folding>
             </state>
           </provider>
@@ -141,14 +159,19 @@
         <option value="$PROJECT_DIR$/widget_corp/cms.md" />
         <option value="$PROJECT_DIR$/pwmbasic/validation-functions.php" />
         <option value="$PROJECT_DIR$/widget_corp/inc/session.php" />
-        <option value="$PROJECT_DIR$/widget_corp/public/new-subject.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/create-subject.php" />
         <option value="$PROJECT_DIR$/widget_corp/inc/validation-functions.php" />
-        <option value="$PROJECT_DIR$/widget_corp/inc/functions.php" />
-        <option value="$PROJECT_DIR$/widget_corp/public/css/public.css" />
-        <option value="$PROJECT_DIR$/widget_corp/public/manage-content.php" />
         <option value="$PROJECT_DIR$/widget_corp/public/delete-subject.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/index.php" />
+        <option value="$PROJECT_DIR$/widget_corp/inc/functions.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/new-subject.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/new-page.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/create-page.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/manage-content.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/css/public.css" />
         <option value="$PROJECT_DIR$/widget_corp/public/edit-subject.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/delete-page.php" />
+        <option value="$PROJECT_DIR$/widget_corp/public/edit-page.php" />
       </list>
     </option>
   </component>
@@ -248,6 +271,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webbasic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webbasic" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="widget_corp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -268,8 +309,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Temp\Desktop\sandbox\webbasic\widget_corp\inc" />
       <recent name="D:\Temp\Desktop\sandbox\webbasic\widget_corp\public" />
+      <recent name="D:\Temp\Desktop\sandbox\webbasic\widget_corp\inc" />
       <recent name="D:\Temp\Desktop\sandbox\webbasic\widget_corp" />
       <recent name="D:\Temp\Desktop\sandbox\webbasic" />
     </key>
@@ -365,12 +406,12 @@
       <workItem from="1481814592882" duration="1018000" />
       <workItem from="1481852932163" duration="32083000" />
       <workItem from="1481943524361" duration="1225000" />
-      <workItem from="1481946176668" duration="14823000" />
+      <workItem from="1481946176668" duration="23749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49282000" />
+    <option name="totallyTimeSpent" value="58208000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,12 +427,12 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26746032" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283859" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283859" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18015873" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -597,14 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="111">
@@ -758,29 +791,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/inc/functions.php">
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="183" column="5" lean-forward="true" selection-start-line="183" selection-start-column="5" selection-end-line="183" selection-end-column="5" />
+        <state relative-caret-position="266">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/new-subject.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="26" />
           <folding>
-            <element signature="e#6#113#0#PHP" expanded="true" />
+            <element signature="e#1281#1287#0#HTML" expanded="true" />
+            <marker date="1481986361115" expanded="true" signature="618:660" ph="..." />
+            <marker date="1481986361115" expanded="true" signature="727:766" ph="..." />
+            <marker date="1481986361115" expanded="true" signature="1189:1226" ph="..." />
+            <marker date="1481986361115" expanded="true" signature="1386:1415" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/css/public.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="96" column="57" lean-forward="false" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/manage-content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="89" lean-forward="false" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,32 +824,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widget_corp/public/new-subject.php">
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/new-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        <state relative-caret-position="465">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="47" selection-end-column="17" />
           <folding>
-            <element signature="e#1281#1287#0#HTML" expanded="true" />
-            <marker date="1481972562549" expanded="true" signature="618:660" ph="..." />
-            <marker date="1481972562549" expanded="true" signature="727:766" ph="..." />
-            <marker date="1481972562549" expanded="true" signature="1189:1226" ph="..." />
-            <marker date="1481972562549" expanded="true" signature="1386:1415" ph="..." />
+            <marker date="1481987551432" expanded="true" signature="673:712" ph="..." />
+            <marker date="1481987551432" expanded="true" signature="779:818" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/create-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="22" column="78" lean-forward="false" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="78" />
+          <folding>
+            <marker date="1481987796310" expanded="true" signature="925:944" ph="INSERT INTO pages... " />
+            <marker date="1481987796310" expanded="true" signature="925:1015" ph="INSERT INTO pages... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/manage-content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/css/public.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/widget_corp/public/edit-subject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="39" column="61" lean-forward="false" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="40" />
           <folding>
-            <element signature="e#3199#3205#0#HTML" expanded="true" />
-            <element signature="e#3579#3585#0#HTML" expanded="true" />
-            <element signature="e#3586#3592#0#HTML" expanded="true" />
-            <marker date="1481979095837" expanded="true" signature="979:1091" ph="INSERT INTO subjects... " />
-            <marker date="1481979095837" expanded="true" signature="1932:2035" ph="..." />
-            <marker date="1481979095837" expanded="true" signature="3011:3048" ph="..." />
-            <marker date="1481979095837" expanded="true" signature="3400:3429" ph="..." />
+            <marker date="1481980645227" expanded="true" signature="979:1091" ph="INSERT INTO subjects... " />
+            <marker date="1481980645227" expanded="true" signature="1932:2035" ph="..." />
+            <marker date="1481980645227" expanded="true" signature="3011:3048" ph="..." />
+            <marker date="1481980645227" expanded="true" signature="3400:3429" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/inc/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="131" column="13" lean-forward="true" selection-start-line="131" selection-start-column="13" selection-end-line="131" selection-end-column="13" />
+          <folding>
+            <element signature="e#6#113#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/delete-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <marker date="1481992783722" expanded="true" signature="380:422" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/widget_corp/public/edit-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
+          <folding>
+            <element signature="e#3749#3755#0#HTML" expanded="true" />
+            <element signature="e#3756#3762#0#HTML" expanded="true" />
+            <marker date="1481992887926" expanded="true" signature="1027:1043" ph="UPDATE subje... " />
+            <marker date="1481992887926" expanded="true" signature="2391:2430" ph="..." />
           </folding>
         </state>
       </provider>

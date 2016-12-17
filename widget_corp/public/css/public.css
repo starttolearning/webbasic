@@ -95,6 +95,7 @@ ul.admin-navigation a:hover{
 
 .page-content{
     margin: .2em; border: 1px solid #1A446C; padding: 1em;
+    width: 400px;
 }
 
 div.message{

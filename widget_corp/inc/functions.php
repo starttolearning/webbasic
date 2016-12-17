@@ -168,6 +168,46 @@ function navigation($subject_array, $page_array)
     return $output;
 }
 
+/**
+ * Function public navigation
+ * @param $page_array int From the $_GET array
+ * @param $subject_array int From the $_GET array
+ * @return string
+ */
+function public_navigation($subject_array, $page_array)
+{
+    $output = "<ul class=\"subjects\">";
+    $subject_sets = find_all_subjects();
+    while ($subject = mysqli_fetch_assoc($subject_sets)) {
+        $output .= "<li ";
+        if ($subject_array && $subject["id"] == $subject_array["id"]) {
+            $output .= "class=\"selected\"";
+        }
+        $output .= ">";
+        $output .= "<a href=\"index.php?subject=" . urlencode($subject["id"]) . "\">";
+        $output .= htmlentities($subject["menu_name"] ). "</a>";
+        if( $subject_array["id"] == $subject["id"] || $page_array["subject_id"] == $subject["id"] ){
+
+            $page_sets = find_pages_for_subject($subject["id"]);
+            $output .= "<ul class=\"pages\">";
+            while ($pages = mysqli_fetch_assoc($page_sets)) {
+                $output .= "<li ";
+                if ($page_array && $pages["id"] == $page_array["id"]) {
+                    $output .= "class=\"selected\"";
+                }
+                $output .= ">";
+                $output .= "<a href=\"index.php?page=" . urlencode($pages["id"]) . "\">" . htmlentities($pages["menu_name"]) . "</a></li>";
+            }
+            mysqli_free_result($page_sets);
+            $output .= "</ul> ";
+        }
+        $output .= "</li> ";
+    }
+    mysqli_free_result($subject_sets);
+    $output .= "</ul>";
+    return $output;
+}
+
 
 function wc_form_errors($errors = array())
 {
