@@ -1,4 +1,5 @@
 #Basic Web Development Skills
+
 ##JavaScript is the foundamental skills
 
 In this area I learn a lot **basic** syntax to interactive with the *DOM Object*:
@@ -8,16 +9,19 @@ In this area I learn a lot **basic** syntax to interactive with the *DOM Object*
 3. JSON
 4. Array
 5. Object
+6. AJAX
 
 ## Add a picture to pleasure my own
 
-A good flat picture from Google
+A good flat picture from Google, using simple format
 ![Image that to demo](testImg.jpg)
 
 
-## Add my famous blockquote
+## Add my famous block quote
 
 > Don't do things that you do not want the other do to you.
+> Unless you want other do that for you!
+>
 > -Wilton Lee
 
 
