@@ -3,6 +3,7 @@
 <?php include_once("../inc/functions.php"); ?>
 <?php include_once("../inc/validation-functions.php"); ?>
 <?php find_current_subject_or_page(); ?>
+<?php $contexual = "admin"; ?>
 <?php include_once("../inc/layouts/header.php"); ?>
 <?php
 if (!$current_page) {
@@ -55,7 +56,14 @@ if (isset($_POST['submit'])) {
 
 <div id="main">
     <div id="navigation">
-        <?php echo navigation($current_subject, $current_page); ?>
+        <?php
+        $options = array(
+            "subject_array" => $current_subject,
+            "page_array" => $current_page,
+            "public" => false,
+        );
+        ?>
+        <?php echo navigations($options); ?>
     </div><!--  navigation-->
 
     <div id="page">

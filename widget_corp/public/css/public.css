@@ -92,7 +92,9 @@ ul.admin-navigation a:hover{
 
 #page h2 {color: #8D0D19; margin-top: 1em; }
 #page h3 { color: #8D0D19; }
-
+#page p{
+    clear: both;
+}
 .page-content{
     margin: .2em; border: 1px solid #1A446C; padding: 1em;
     width: 400px;

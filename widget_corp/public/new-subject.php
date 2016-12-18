@@ -1,13 +1,21 @@
 <?php include_once("../inc/session.php"); ?>
 <?php include_once("../inc/db-connection.php"); ?>
 <?php include_once("../inc/functions.php"); ?>
+<?php $contexual = "admin"; ?>
 <?php include_once("../inc/layouts/header.php"); ?>
 
 <?php find_current_subject_or_page(); ?>
 
 <div id="main">
     <div id="navigation">
-        <?php echo navigation($current_subject, $current_page); ?>
+        <?php
+        $options = array(
+            "subject_array" => $current_subject,
+            "page_array" => $current_page,
+            "public" => false,
+        );
+        ?>
+        <?php echo navigations($options); ?>
     </div><!--  navigation-->
 
     <div id="page">

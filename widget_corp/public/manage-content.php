@@ -1,13 +1,21 @@
 <?php include_once("../inc/session.php"); ?>
 <?php include_once("../inc/db-connection.php"); ?>
 <?php include_once("../inc/functions.php"); ?>
+<?php $contexual = "admin"; ?>
 <?php include_once("../inc/layouts/header.php"); ?>
 
 <?php find_current_subject_or_page(); ?>
 
 <div id="main">
     <div id="navigation">
-        <?php echo navigation($current_subject, $current_page); ?>
+        <?php
+        $options = array(
+            "subject_array" => $current_subject,
+            "page_array" => $current_page,
+            "public" => false,
+        );
+        ?>
+        <?php echo navigations($options); ?>
         <br/>
         <a href="new-subject.php">+Add a subject</a>
     </div><!--  navigation-->
@@ -40,7 +48,8 @@
             <b>Page name:</b> <?php echo htmlentities($current_page['menu_name']); ?><br/>
             Position: <?php echo $current_page["position"] ?><br/>
             Visible: <?php echo $current_page["visible"] ? "true" : "false"; ?><br/>
-            Content: <div class="page-content"><?php echo htmlentities($current_page['content']); ?></div>
+            Content:
+            <div class="page-content"><?php echo htmlentities($current_page['content']); ?></div>
             <br/>
             <a href="edit-page.php?page=<?php echo urlencode($current_page["id"]); ?>">Edit</a>
 

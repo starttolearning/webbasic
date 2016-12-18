@@ -1,4 +1,5 @@
 <?php include_once("../inc/functions.php"); ?>
+<?php $contexual = "admin"; ?>
 <?php include_once("../inc/layouts/header.php"); ?>
     <div id="main">
         <div id="navigation">
