@@ -74,7 +74,7 @@ function find_pages_for_subject($subject_id)
  * @param $subject_id
  * @return array|null
  */
-function get_subject_name_by_id( $subject_id ) {
+function find_subject_by_id($subject_id ) {
     global $connection;
     // Escape the sql injection
     $safe_subject_id = mysqli_real_escape_string($connection, $subject_id);
@@ -122,7 +122,7 @@ function find_current_subject_or_page(){
     global $current_subject;
     global $current_page;
     if (isset($_GET["subject"])) {
-        $current_subject = get_subject_name_by_id($_GET["subject"]);
+        $current_subject = find_subject_by_id($_GET["subject"]);
         $current_page =null;
     } else if (isset($_GET["page"])) {
         $current_page = get_page_by_id($_GET["page"]);

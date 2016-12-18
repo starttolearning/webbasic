@@ -3,7 +3,7 @@
 <?php include_once("../inc/functions.php"); ?>
 
 <?php
-$current_subject = get_subject_name_by_id($_GET["subject"]);
+$current_subject = find_subject_by_id($_GET["subject"]);
 if (!$current_subject) {
     // Subject ID was missing  or invalid or
     // Subject cannot find in the database
