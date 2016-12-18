@@ -135,6 +135,51 @@ function password_check($password, $existing_hash)
     }
 }
 
+function find_admin_by_name($username)
+{
+    global $connection;
+    // Escape the sql injection
+    $safe_admin_name = mysqli_real_escape_string($connection, $username);
+    $query = "SELECT * ";
+    $query .= "FROM admins ";
+    $query .= "WHERE username = '{$safe_admin_name}' ";
+    $query .= "Limit 1";
+    $admin_set = mysqli_query($connection, $query);
+    confirm_query($admin_set);
+
+    if ($admin = mysqli_fetch_assoc($admin_set)) {
+        return $admin;
+    } else {
+        return null;
+    }
+}
+
+function attempt_login($username, $password ){
+    $admin = find_admin_by_name($username);
+    if($admin){
+        // Check the authentication
+        if( password_check($password,$admin["hashed_password"])){
+            // check passed
+            return $admin;
+        }else{
+            return false;
+        }
+
+    }else{
+        return false;
+    }
+}
+
+function logged_in(){
+    return isset( $_SESSION["admin_id"] );
+}
+
+function confirm_logged_in(){
+    if( !logged_in() ){
+        redirect_to("login.php");
+    }
+}
+
 
 /**
  * @return bool|mysqli_result

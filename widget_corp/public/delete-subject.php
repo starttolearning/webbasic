@@ -1,7 +1,7 @@
 <?php include_once("../inc/session.php"); ?>
 <?php include_once("../inc/db-connection.php"); ?>
 <?php include_once("../inc/functions.php"); ?>
-
+<?php confirm_logged_in();  ?>
 <?php
 $current_subject = find_subject_by_id($_GET["subject"]);
 if (!$current_subject) {

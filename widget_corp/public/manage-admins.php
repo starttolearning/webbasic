@@ -1,6 +1,7 @@
 <?php include_once("../inc/session.php"); ?>
 <?php include_once("../inc/db-connection.php"); ?>
 <?php include_once("../inc/functions.php"); ?>
+<?php confirm_logged_in();  ?>
 <?php $contexual = "admin"; ?>
 <?php include_once("../inc/layouts/header.php"); ?>
 <?php
