@@ -100,7 +100,7 @@ class Photograph extends DatabaseObject
 
     public function destroy(){
       // First remove the database entrys
-      if( self::delete($this->id) ){
+      if( self::delete() ){
         // then remove the file
         $target_path = SITE_ROOT . DS . "public" . DS . $this->image_path();
         return unlink($target_path) ? true : false;
@@ -128,4 +128,7 @@ class Photograph extends DatabaseObject
         }
     }
 
+    public function comments(){
+      return Comment::find_comments_on($this->id);
+    }
 }

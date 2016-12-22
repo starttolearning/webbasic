@@ -19,37 +19,33 @@ get_layout_template("admin-header");
             <td width="150">Type</td>
             <td width="150">Size</td>
             <td width="150">Photo</td>
+            <td width="150">Comments</td>
             <td width="150">Actions</td>
         </tr>
         </thead>
         <tbody>
         <?php $photos = Photograph::find_all(); ?>
-        <?php
-        $output = "";
-
-        foreach ($photos as $photo) {
-            $output .= "<tr>";
-            $output .= "<td>";
-            $output .= $photo->caption;
-            $output .= "</td>";
-            $output .= "<td>";
-            $output .= $photo->type;
-            $output .= "</td>";
-            $output .= "<td>";
-            $output .= $photo->size_as_text();
-            $output .= "</td>";
-            $output .= "<td>";
-            $output .= "<img width=\"145\" src=\"../".$photo->image_path()." \">";
-            $output .= "</td>";
-            $output .= "<td>";
-            $output .="<a href=\"photo-delete.php?id={$photo->id}\">Delete</a>";
-            $output .= "</td>";
-            $output .= "</tr>";
-
-        }
-
-        echo $output;
-        ?>
+        <?php   foreach ($photos as $photo) : ?>
+          <tr>
+            <td><?php echo $photo->caption; ?></td>
+            <td><?php echo $photo->type; ?></td>
+            <td><?php echo $photo->size_as_text(); ?></td>
+            <td><img width="145" src="../<?php echo $photo->image_path(); ?>" /></td>
+            <?php
+              $output = "";
+              $counts = count( $photo->comments() );
+              if($counts ==0 ){
+                $output .= "No comments";
+              }else {
+                $output .="<a href=\"comment-list.php?id={$photo->id}\">";
+                $output .= $counts;
+                $output .="</a>";
+              }
+            ?>
+            <td><?php echo $output; ?></td>
+            <td><a href="photo-delete.php?id=<?php echo $photo->id; ?>" >Delete</a></td>
+          </tr>
+        <?php endforeach; ?>
         </tbody>
     </table>
 <br/>

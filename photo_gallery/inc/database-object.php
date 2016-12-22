@@ -34,11 +34,11 @@ class DatabaseObject
     /*
       The basic database operation: DELETE
     */
-    public function delete($id)
+    public function delete( )
     {
         global $database;
         $sql = "DELETE FROM " . static::$table_name;
-        $sql .= " WHERE id= " . $database->escape_value($id);
+        $sql .= " WHERE id= " . $database->escape_value($this->id);
         $sql .= " LIMIT 1";
         var_dump($sql);
         $database->query($sql);

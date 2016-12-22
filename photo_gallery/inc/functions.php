@@ -67,3 +67,8 @@ function log_action($action, $message = "")
          echo "Could not open log file for writing.";
     }
 }
+
+function time_to_text($times_string){
+  $timestamp = strtotime($times_string);
+  return strftime( "%B %d, %Y at %I:%M %p", $timestamp );
+}

@@ -14,7 +14,7 @@ class Comment extends DatabaseObject{
   public $body;
 
   public static function make($photo_id, $author, $body){
-    if( !empty($photo_id) && !empty($author) && ! !empty($body) ){
+    if( !empty($photo_id) && !empty($author) && !empty($body) ){
       $comment = new Comment();
       $comment->photograph_id = (int)$photo_id;
       $comment->author = $author;
@@ -33,5 +33,7 @@ class Comment extends DatabaseObject{
     $sql .= " ORDER BY created ASC";
     return parent::find_by_sql($sql);
   }
-  
+
+
+
 }

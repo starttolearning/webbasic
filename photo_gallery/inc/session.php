@@ -5,7 +5,7 @@ class Session
 
     private $logged_in = false;
     public $user_id;
-    public $session;
+    public $message;
 
     function __construct()
     {
@@ -41,7 +41,7 @@ class Session
         $_SESSION['message']  = $msg;
       }else {
         // then this is the  get message
-        return $this->message;
+          return $this->message;
       }
     }
 
