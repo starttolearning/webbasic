@@ -4,6 +4,28 @@ if (!$session->is_logged_in()) {
     redirect_to("login.php");
 }
 get_layout_template("admin-header");
+
+// Pagination process
+// 1. the current page number ($current_page)
+$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
+
+// 2. records per page ( $per_page)
+$per_page = 2;
+
+// 3. total count of records ( $total_count)
+$total_count = Photograph:: count_all();
+
+$pagination = new Pagination($current_page, $per_page, $total_count);
+
+// Instead of finding all records, just find the records for this page
+
+$sql = "SELECT * FROM photographs ";
+$sql .= "LIMIT {$per_page} ";
+$sql .="OFFSET {$pagination->offset()}";
+
+
+$photos = Photograph::find_by_sql($sql);
+
 ?>
 
 <?php if (isset($message)) {
@@ -24,7 +46,6 @@ get_layout_template("admin-header");
         </tr>
         </thead>
         <tbody>
-        <?php $photos = Photograph::find_all(); ?>
         <?php   foreach ($photos as $photo) : ?>
           <tr>
             <td><?php echo $photo->caption; ?></td>
@@ -49,6 +70,22 @@ get_layout_template("admin-header");
         </tbody>
     </table>
 <br/>
-<a href="photo-upload.php">Upload photo</a>
+<a href="photo-upload.php">Upload photo</a> &nbsp; &nbsp;
 
+<!-- pagination links -->
+<?php if( $pagination->total_page() >1) : ?>
+  <?php if( $pagination->has_previous_page() ) : ?>
+  <a href="photo-list.php?page=<?php echo $pagination->previous_page(); ?>">&laquo;Previous</a> &nbsp;
+  <?php endif; ?>
+  <?php for( $i=1; $i <= $pagination->total_page() ; $i++ ): ?>
+    <?php if( $current_page == $i): ?>
+      <?php echo $i; ?>
+    <?php else: ?>
+      <a href="photo-list.php?page=<?php echo $i; ?>"><?php echo $i; ?></a> &nbsp;
+    <?php endif; ?>
+  <?php endfor; ?>
+  <?php if( $pagination->has_next_page() ) : ?>
+  <a href="photo-list.php?page=<?php echo $pagination->next_page(); ?>">Next &raquo;</a>
+  <?php endif; ?>
+<?php endif; ?>
 <?php get_layout_template("admin-footer"); ?>
