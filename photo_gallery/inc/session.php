@@ -5,10 +5,12 @@ class Session
 
     private $logged_in = false;
     public $user_id;
+    public $session;
 
     function __construct()
     {
         session_start();
+        $this->check_message();
         $this->check_login();
     }
 
@@ -32,6 +34,17 @@ class Session
         $this->logged_in = false;
     }
 
+    public function message( $msg =""){
+      if( ! empty( $msg ) ){
+        // then this is 'set' message
+        // make sure you understand why $this->message = $msg wouldn't work
+        $_SESSION['message']  = $msg;
+      }else {
+        // then this is the  get message
+        return $this->message;
+      }
+    }
+
     private function check_login()
     {
         if (isset($_SESSION['user_id'])) {
@@ -42,6 +55,18 @@ class Session
             $this->logged_in = false;
         }
     }
+
+    private function check_message(){
+      // Is there a message stored in the message
+      if( isset( $_SESSION['message'] ) ){
+        // Add it as an attribute and erase the stored version
+        $this->message  = $_SESSION['message'];
+        unset( $_SESSION['message'] );
+      }else {
+        $this->message = "";
+      }
+    }
 }
 
 $session = new Session();
+$message = $session->message();

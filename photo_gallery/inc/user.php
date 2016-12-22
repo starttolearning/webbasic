@@ -1,13 +1,14 @@
 <?php
 // If it's going to need the database , then it is
 // probably smart to require it before we start
-require_once(LIB_PATH.DS."database.php");
+require_once(LIB_PATH . DS . "database.php");
 
 
 class User extends DatabaseObject
 {
 
     protected static $table_name = "users";
+    protected static $db_fields = array("id", "username", "password", "first_name", "last_name");
     public $id;
     public $username;
     public $password;
